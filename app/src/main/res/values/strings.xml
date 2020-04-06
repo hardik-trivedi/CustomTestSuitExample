@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CustomTestSuitExample</string>
+    <string name="coronavirus_safety_tip">Coronavirus safety tip</string>
+    <string name="safety_tips">Only go outside for food, health reasons or work (but only if you cannot work from home)\n\nIf you go out, stay 2 metres (6ft) away from other people at all times\n\nWash your hands as soon as you get home\n\nAvoid touching your eyes, nose and mouth\n\nClean and disinfect household surfaces\n\nCover your coughs and sneezes</string>
+    <string name="i_take_pledge">I take pledge to stay at home</string>
+</resources>
