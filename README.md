@@ -9,6 +9,7 @@ To demonstrate this scenario we have created a simple application which displays
 
 There are total 3 test cases written to verify values for given 3 TextViews. Those test cases are shown in following code snippet
 ```
+@Test
 fun displaysSafetyTip() {
     Espresso.onView(ViewMatchers.withId(R.id.messageTextView)).check(
         ViewAssertions.matches(
@@ -17,7 +18,7 @@ fun displaysSafetyTip() {
     )
 }
 
-
+@Test
 fun displaysTitle() {
     Espresso.onView(ViewMatchers.withId(R.id.titleTextView)).check(
         ViewAssertions.matches(
@@ -26,7 +27,7 @@ fun displaysTitle() {
     )
 }
 
-
+@Test
 fun displaysIPledgeButton() {
     Espresso.onView(ViewMatchers.withId(R.id.pledgeButton)).check(
         ViewAssertions.matches(
@@ -40,17 +41,19 @@ Simple! No rocket science so far. Now Android offers some annotations to make yo
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class MainActivityTest {
-    
+    @Test
     @LargeTest
     fun displaysSafetyTip() {
         // Your assertions
     }
 
+    @Test
     @SmallTest
     fun displaysTitle() {
         // Your assertions
     }
 
+    @Test
     @MediumTest
     fun displaysIPledgeButton() {
         // Your assertions
