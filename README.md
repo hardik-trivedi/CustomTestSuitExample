@@ -88,7 +88,10 @@ annotation class SmokeTest
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
 annotation class FastTest
+```
+
 And I have modified the test suit as well. I have annotated test cases, which are as following.
+```
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
 
