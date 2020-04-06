@@ -8,8 +8,8 @@ import androidx.test.filters.LargeTest
 import androidx.test.filters.MediumTest
 import androidx.test.filters.SmallTest
 import androidx.test.rule.ActivityTestRule
-import com.hardiktrivedi.customtestsuitexample.annotation.FastTest
 import com.hardiktrivedi.customtestsuitexample.annotation.SmokeTest
+import com.hardiktrivedi.customtestsuitexample.annotation.ButtonTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -28,8 +28,8 @@ class MainActivityTest {
 
     @Test
     @LargeTest
+    @ButtonTest
     @SmokeTest
-    @FastTest
     fun displaysSafetyTip() {
         Espresso.onView(ViewMatchers.withId(R.id.messageTextView)).check(
             ViewAssertions.matches(
@@ -40,7 +40,7 @@ class MainActivityTest {
 
     @Test
     @SmallTest
-    @FastTest
+    @SmokeTest
     fun displaysTitle() {
         Espresso.onView(ViewMatchers.withId(R.id.titleTextView)).check(
             ViewAssertions.matches(
@@ -51,7 +51,7 @@ class MainActivityTest {
 
     @Test
     @MediumTest
-    @SmokeTest
+    @ButtonTest
     fun displaysIPledgeButton() {
         Espresso.onView(ViewMatchers.withId(R.id.pledgeButton)).check(
             ViewAssertions.matches(
